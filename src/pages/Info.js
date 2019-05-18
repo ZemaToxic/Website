@@ -1,11 +1,44 @@
 import React, {Component} from 'react';
 
-class Info extends Component {
-    render() {
-        return (
-            <p>Info Text</p>
-        );
+const INITIAL_STATE = {
+    isFetching: false,
+    data: {},
+    error: null
+  }
+  
+  export default class Info extends Component {
+    state = { ...INITIAL_STATE }
+    componentDidMount () {
+      this.fetchData()
     }
-}
-
-export default Info
+    fetchData () {
+      this.setState({ ...INITIAL_STATE, isFetching: true })
+      if(!INITIAL_STATE.isFetching){
+        fetch('localhost:3001')
+        .then((data) => this.setState({ ...INITIAL_STATE, data }))
+        .catch((error) => this.setState({ ...INITIAL_STATE, error }))
+      }
+    }
+    render () {
+      const {
+        isFetching,
+        data,
+        error
+      } = this.state
+      return (
+        <div className="bot-info-container">
+          {
+            isFetching
+              ? (<p>Loading...</p>)
+              : error
+                ? (<p>ERROR: {error}</p>)
+                : Object.keys(data).map((key, i) => (
+                  <div className="info-key" key={i}>
+                    {`${key} - ${data[key]}`}
+                  </div>
+                ))
+          }
+        </div>
+      )
+    }
+  }
