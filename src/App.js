@@ -5,6 +5,10 @@ import Home from './pages/Home'
 import Info from './pages/Info'
 import Login from './pages/Login'
 import Bots from './pages/Bots'
+
+import DiscordBots from './pages/bots/DiscordBots'
+import TwitchBots from './pages/bots/TwitchBots'
+
 class App extends Component {
     render() {
         return (
@@ -30,9 +34,11 @@ class App extends Component {
                     <div className="content">
                         <h1>ZemaToxic Bots</h1>
                             <Route path="/" exact component={Home} />
-                            <Route path="/bots/" component={Bots} />
+                            <Route exact path="/bots/" component={Bots} />
                             <Route path="/info/" component={Info} />
                             <Route path="/login/" component={Login} />
+                            <Route path="/bots/discordbots/" component={DiscordBots} />
+                            <Route path="/bots/twitchbots/" component={TwitchBots} />   
                     </div>
                 </div>
                 </Router>
