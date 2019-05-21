@@ -18,21 +18,21 @@ class App extends Component {
                     <div className="sidebar">
                             <ul>
                                 <li>
-                                    <Link to="/"><h2>Home</h2></Link>
+                                    <Link to="/" className="SidebarLink"><h2>Home</h2></Link>
                                 </li>
                                 <li>
-                                    <Link to="/bots"><h2>Bots</h2></Link>
+                                    <Link to="/bots" className="SidebarLink"><h2>Bots</h2></Link>
                                 </li>
                                 <li>
-                                    <Link to="/info"><h2>Info</h2></Link>
+                                    <Link to="/info" className="SidebarLink"><h2>Info</h2></Link>
                                 </li>
                                 <li>
-                                    <Link to="/login"><h2>Login</h2></Link>
+                                    <Link to="/login" className="SidebarLink"><h2>Login</h2></Link>
                                 </li>
                             </ul>
                     </div>
                     <div className="content">
-                        <h1>ZemaToxic Bots</h1>
+                        <div className="PageTop">ZemaToxic Bots</div>
                             <Route path="/" exact component={Home} />
                             <Route exact path="/bots/" component={Bots} />
                             <Route path="/info/" component={Info} />
