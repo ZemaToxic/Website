@@ -12,8 +12,8 @@ import TwitchBots from './pages/bots/TwitchBots'
 class App extends Component {
     render() {
         return (
-            <div className="App" >
                 <Router>
+            <div className="App" >
                 <div className="container">
                     <div className="sidebar">
                             <ul>
@@ -41,8 +41,8 @@ class App extends Component {
                             <Route path="/bots/twitchbots/" component={TwitchBots} />   
                     </div>
                 </div>
-                </Router>
             </div>
+                </Router>
         );
     }
 }
