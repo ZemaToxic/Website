@@ -25,6 +25,25 @@
     height: 100%;
     background: rgb(32, 34, 37);
   }
+  .Home {
+    display: flex;
+  }
+  .TwitchBox {
+    padding: 15px 15px;
+    border-radius: 10px;
+    background: #6441A4;
+    box-shadow: 5px 5px 13px 5px rgba(0,0,0,0.60);
+    width: 75%;
+    margin: 10px 10px;
+  }
+  .InfoBox {
+    padding: 15px 15px;
+    border-radius: 10px;
+    background: black;
+    width: 25%;
+    margin: 10px 10px;
+  }
+
   ul {
     list-style-type: none;
     padding: 5px;
