@@ -10,9 +10,17 @@ class Home extends Component {
                 </div>
                 <div className="InfoBox">
                     <h3>About me</h3>
-                    <p>
-                        
-                    </p>
+                    <ul>
+                        <li>
+                            24 Year old Kiwi
+                        </li>
+                        <li>
+                            C++, C#, Js, React
+                        </li>
+                        <li>
+                            Creator of TwitchBots and Discord bots.
+                        </li>
+                    </ul>
                 </div>
             </dv>
         );

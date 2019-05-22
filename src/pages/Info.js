@@ -14,7 +14,7 @@ const INITIAL_STATE = {
     fetchData () {
       this.setState({ ...INITIAL_STATE, isFetching: true })
       if(!INITIAL_STATE.isFetching){
-        fetch('http://www.zematoxic.com/botinfo')
+        fetch('http://www.zematoxic.com/api/botinfo')
         .then((data) => data.json())
         .then((data) => this.setState({ ...INITIAL_STATE, data }))
         .catch((error) => this.setState({ ...INITIAL_STATE, error }))
