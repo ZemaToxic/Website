@@ -12,7 +12,7 @@ import TwitchBots from './pages/bots/TwitchBots'
 class App extends Component {
     render() {
         return (
-                <Router>
+         <Router>
             <div className="App" >
                 <div className="container">
                     <div className="sidebar">
@@ -42,7 +42,7 @@ class App extends Component {
                     </div>
                 </div>
             </div>
-                </Router>
+        </Router>
         );
     }
 }
