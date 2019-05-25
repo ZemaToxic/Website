@@ -4,10 +4,7 @@ import Twitch from "./Twitch";
 class Home extends Component {
     render() {
         return (
-            <dv className="Home">
-                <div className="TwitchBox">
-                    <Twitch />
-                </div>
+            <div className="Home">
                 <div className="InfoBox">
                     <h3>About me</h3>
                     <ul>
@@ -22,7 +19,10 @@ class Home extends Component {
                         </li>
                     </ul>
                 </div>
-            </dv>
+                <div className="TwitchBox">
+                    <Twitch />
+                </div>
+            </div>
         );
     }
 }
