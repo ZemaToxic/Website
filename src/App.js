@@ -32,7 +32,7 @@ class App extends Component {
                             </ul>
                     </div>
                     <div className="content">
-                        <div className="PageTop">ZemaToxic Bots</div>
+                        <div className="PageTop"><h1>ZemaToxic Bots</h1></div>
                             <Route path="/" exact component={Home} />
                             <Route exact path="/bots/" component={Bots} />
                             <Route path="/info/" component={Info} />

@@ -20,6 +20,9 @@ body {
   background: rgb(54, 57, 63);
 }
 
+h1 {
+  width: 100%;
+}
 
 .container {
   display: flex;
@@ -51,11 +54,9 @@ body {
 }
 
 .PageTop {
-  height: 50px;
   padding: 15px 15px;
   text-align: center;
-  font-size: 3em;
-  display: block;
+  display: flex;
   background: rgb(32, 34, 37);
 }
 
@@ -90,7 +91,7 @@ body {
 }
 
 .Discord {
-  margin: 30px 30px;
+  margin: 15px 15px;
   width: 150px;
   height: 150px;
   padding: 15px 15px;
@@ -100,7 +101,7 @@ body {
 }
 
 .Twitch {
-  margin: 30px 30px;
+  margin: 15px 15px;
   width: 150px;
   height: 150px;
   padding: 15px 15px;
