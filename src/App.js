@@ -34,7 +34,7 @@ class App extends Component {
                     <div className="content">
                         <div className="PageTop"><h1>ZemaToxic Bots</h1></div>
                             <Route path="/" exact component={Home} />
-                            <Route path="/bots/" component={Bots} />
+                            <Route exact path="/bots/" component={Bots} />
                             <Route path="/info/" component={Info} />
                             <Route path="/login/" component={Login} />
                             <Route path="/bots/discordbots/" component={DiscordBots} />
