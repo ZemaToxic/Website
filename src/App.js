@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Router, Route, Link} from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Home from './pages/Home'
 import Info from './pages/Info'
@@ -9,7 +10,21 @@ import Bots from './pages/Bots'
 import DiscordBots from './pages/bots/DiscordBots'
 import TwitchBots from './pages/bots/TwitchBots'
 
+import { history } from './_helpers';
+import { alertActions } from './_actions';
+
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+
+        const { dispatch } = this.props;
+        history.listen((location, action) => {
+            // clear alert on location change
+            dispatch(alertActions.clear());
+        });
+    }
+
     render() {
         return (
          <Router>
@@ -47,4 +62,13 @@ class App extends Component {
     }
 }
 
-export default App
+function mapStateToProps(state) {
+    const { alert } = state;
+    return {
+        alert
+    };
+}
+
+
+const connectedApp = connect(mapStateToProps)(App);
+export { connectedApp as App };

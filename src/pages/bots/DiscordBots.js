@@ -26,7 +26,6 @@ const INITIAL_STATE = {
         data,
         error
       } = this.state
-      console.log(data)
       return (
         <div className="Bot-Commands-Container">
           <h1>Discord Bot commands</h1>
