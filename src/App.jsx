@@ -35,7 +35,7 @@ class App extends Component {
                     <div className="sidebar">
                             <ul>
                                 <li>
-                                    <Link to="/" className="SidebarLink"><h2>Home</h2></Link>
+                                    <Link to="/home" className="SidebarLink"><h2>Home</h2></Link>
                                 </li>
                                 <li>
                                     <Link to="/bots" className="SidebarLink"><h2>Bots</h2></Link>
@@ -50,13 +50,13 @@ class App extends Component {
                     </div>
                     <div className="content">
                         <div className="PageTop"><h1>ZemaToxic Bots</h1></div>
-                            <Route path="/" exact component={Home} />
+                            <Route path="/home" exact component={Home} />
                             <Route exact path="/bots/" component={Bots} />
                             <Route path="/info/" component={Info} />
                             <Route path="/login/" component={Login} />
                             <Route path="/bots/discordbots/" component={DiscordBots} />
                             <Route path="/bots/twitchbots/" component={TwitchBots} />
-                            <PrivateRoute exact path="/homepage" component={HomePage} />
+                            <PrivateRoute exact path="/" component={HomePage} />
                             <Route path="/login/loginpage" component={LoginPage} />
                     </div>
                 </div>
