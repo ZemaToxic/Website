@@ -9,12 +9,27 @@ import Bots from './pages/Bots'
 import DiscordBots from './pages/bots/DiscordBots'
 import TwitchBots from './pages/bots/TwitchBots'
 
-
+import { history } from './_helpers';
+import { PrivateRoute } from './_components/PrivateRoute';
+import { HomePage } from './HomePage/HomePage';
+import { LoginPage } from './LoginPage/LoginPage';
+import { alertActions } from './_actions/';
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+
+        const { dispatch } = this.props;
+        history.listen((location, action) => {
+            // clear alert on location change
+            dispatch(alertActions.clear());
+        });
+    }
+
     render() {
         return (
-         <Router>
+        <Router history={history}>
             <div className="App" >
                 <div className="container">
                     <div className="sidebar">
@@ -41,6 +56,8 @@ class App extends Component {
                             <Route path="/login/" component={Login} />
                             <Route path="/bots/discordbots/" component={DiscordBots} />
                             <Route path="/bots/twitchbots/" component={TwitchBots} />
+                            <PrivateRoute exact path="/homepage" component={HomePage} />
+                            <Route path="/login/loginpage" component={LoginPage} />
                     </div>
                 </div>
             </div>
