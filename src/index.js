@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import { store } from './_helpers';
 
-import { App } from './App';
+import App from './App';
 import './app.css'
 import * as serviceWorker from './serviceWorker';
 
