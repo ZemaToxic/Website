@@ -29,7 +29,7 @@ class Login extends Component {
                             }
                             <Router history={history}>
                                 <div>
-                                    <PrivateRoute exact path="/" component={HomePage} />
+                                    <PrivateRoute exact path="/homepage" component={HomePage} />
                                     <Route path="/login/loginpage" component={LoginPage} />
                                 </div>
                             </Router>
