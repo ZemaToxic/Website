@@ -20,8 +20,10 @@ class App extends Component {
 
     const { dispatch } = this.props;
     history.listen((location, action) => {
+      console.log("Dispatch: " + dispatch)
+      console.log("props: " + this.props)
       // clear alert on location change
-      // dispatch(alertActions.clear()); // n is not a function
+      dispatch(alertActions.clear()); // n is not a function
     });
   }
 
