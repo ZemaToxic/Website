@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { userActions } from '../_actions/user.actions';
+import { alertActions } from "../_actions/";
+import { history } from "../_helpers";
 
 class LoginPage extends React.Component {
     constructor(props) {
