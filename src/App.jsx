@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Router, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Info from "./pages/Info";
@@ -12,7 +12,6 @@ import { history } from "./_helpers";
 import { PrivateRoute } from "./_components/PrivateRoute";
 import { HomePage } from "./HomePage/HomePage";
 import { LoginPage } from "./LoginPage/LoginPage";
-
 
 class App extends Component {
   render() {

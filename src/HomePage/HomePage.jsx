@@ -17,7 +17,7 @@ class HomePage extends React.Component {
                 <p>You're logged in with React & JWT!!</p>
                 <h3>Users from secure api end point:</h3>
                 {users.loading && <em>Loading users...</em>}
-                {users.error && <span className="text-danger">ERROR: {users.error}</span>}
+                {users.error && <span className="text-danger">ERROR: {users.error.message}</span>}
                 {users.items &&
                     <ul>
                         {users.items.map((user, index) =>
