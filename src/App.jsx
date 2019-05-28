@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Info from "./pages/Info";
-import { Login } from "./pages/Login";
 import Bots from "./pages/Bots";
 
 import DiscordBots from "./pages/bots/DiscordBots";
@@ -59,11 +58,11 @@ class App extends Component {
               <div className="PageTop">
                 <h1>ZemaToxic Bots</h1>
               </div>
-              <PrivateRoute exact path="/" component={HomePage} />
-              <Route path="/home" exact component={Home} />
+              <Route path="/" exact component={Home} />
               <Route exact path="/bots/" component={Bots} />
               <Route path="/info/" component={Info} />
               <Route path="/login/" component={LoginPage} />
+              <PrivateRoute exact path="/home" component={HomePage} />
               <Route path="/bots/discordbots/" component={DiscordBots} />
               <Route path="/bots/twitchbots/" component={TwitchBots} />
             </div>
