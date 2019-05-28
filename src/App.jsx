@@ -15,15 +15,6 @@ import { LoginPage } from "./LoginPage/LoginPage";
 import { alertActions } from "./_actions/";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    history.listen((location, action) => {
-      // clear alert on location change
-      //dispatch(alertActions.clear()); // n is not a function
-    });
-  }
-
   render() {
     return (
       <Router history={history}>

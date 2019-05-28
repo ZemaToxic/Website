@@ -8,6 +8,12 @@ class LoginPage extends React.Component {
     constructor(props) {
         super(props);
 
+        const { dispatch } = this.props;
+        history.listen((location, action) => {
+          // clear alert on location change
+          dispatch(alertActions.clear()); // n is not a function
+        });    
+
         // reset login status
         this.props.dispatch(userActions.logout());
 
@@ -34,13 +40,6 @@ class LoginPage extends React.Component {
         const { dispatch } = this.props;
         if (username && password) {
             dispatch(userActions.login(username, password));
-        }
-    }
-
-    componentDidMount() {
-        const { dispatch } = this.props;
-        if(this.props.submitted){
-            dispatch(push('./home'));
         }
     }
 
