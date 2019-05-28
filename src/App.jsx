@@ -12,7 +12,7 @@ import { history } from "./_helpers";
 import { PrivateRoute } from "./_components/PrivateRoute";
 import { HomePage } from "./HomePage/HomePage";
 import { LoginPage } from "./LoginPage/LoginPage";
-import { alertActions } from "./_actions/";
+
 
 class App extends Component {
   render() {
