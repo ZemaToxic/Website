@@ -13,11 +13,12 @@ function login(username, password) {
     return dispatch => {
         dispatch(request({ username }));
 
+        console.log("succesful login");
         userService.login(username, password)
             .then(
                 user => { 
                     dispatch(success(user));
-                    history.push('/');
+                    history.push('/home');
                 },
                 error => {
                     dispatch(failure(error));
