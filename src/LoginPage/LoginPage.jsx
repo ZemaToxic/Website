@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { connect } from 'react-redux';
+import { push } from 'connected-react-router'
 
 import { userActions } from '../_actions/user.actions';
 import { alertActions } from "../_actions/";
@@ -45,6 +46,12 @@ class LoginPage extends React.Component {
         }
     }
 
+    componentDidMount () {
+        const { user, dispatch } = this.props
+        if (user) {
+          dispatch(push('/home'))
+        }
+      }
     render() {
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
@@ -79,6 +86,7 @@ class LoginPage extends React.Component {
 function mapStateToProps(state) {
     const { loggingIn } = state.authentication;
     return {
+        user: state.user,
         loggingIn
     };
 }
