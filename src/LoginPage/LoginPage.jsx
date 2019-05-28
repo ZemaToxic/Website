@@ -37,6 +37,12 @@ class LoginPage extends React.Component {
         }
     }
 
+    componentDidMount() {
+        if(this.props.submitted){
+            dispatch(push('./home'));
+        }
+    }
+
     render() {
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
