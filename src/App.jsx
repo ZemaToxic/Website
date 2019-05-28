@@ -23,7 +23,7 @@ class App extends Component {
             <div className="sidebar">
               <ul>
                 <li>
-                  <Link to="/home" className="SidebarLink">
+                  <Link to="/" className="SidebarLink">
                     <h2>Home</h2>
                   </Link>
                 </li>
