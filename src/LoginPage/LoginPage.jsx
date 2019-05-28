@@ -38,6 +38,7 @@ class LoginPage extends React.Component {
     }
 
     componentDidMount() {
+        const { dispatch } = this.props;
         if(this.props.submitted){
             dispatch(push('./home'));
         }
