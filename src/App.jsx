@@ -22,7 +22,7 @@ class App extends Component {
             <div className="sidebar">
               <ul>
                 <li>
-                  <Link to="/" className="SidebarLink">
+                  <Link to="/home" className="SidebarLink">
                     <h2>Home</h2>
                   </Link>
                 </li>
@@ -47,11 +47,11 @@ class App extends Component {
               <div className="PageTop">
                 <h1>ZemaToxic Bots</h1>
               </div>
-              <Route path="/" exact component={Home} />
+              <Route path="/home" exact component={Home} />
               <Route exact path="/bots/" component={Bots} />
               <Route path="/info/" component={Info} />
               <Route path="/login/" component={LoginPage} />
-              <PrivateRoute exact path="/home" component={HomePage} />
+              <PrivateRoute exact path="/homePage" component={HomePage} />
               <Route path="/bots/discordbots/" component={DiscordBots} />
               <Route path="/bots/twitchbots/" component={TwitchBots} />
             </div>
