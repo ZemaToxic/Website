@@ -49,7 +49,7 @@ class LoginPage extends React.Component {
     componentDidMount () {
         const { user, dispatch } = this.props
         if (user) {
-          dispatch(push('/home'))
+          dispatch(push('/homePage'))
         }
       }
     render() {
