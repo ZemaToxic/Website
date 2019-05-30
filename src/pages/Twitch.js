@@ -5,10 +5,7 @@ const EMBED_URL = 'https://embed.twitch.tv/embed/v1.js';
 class Twitch extends React.Component {
   componentDidMount() {
     const script = document.createElement('script');
-    script.setAttribute(
-      'src',
-      EMBED_URL
-    );
+    script.setAttribute('src', EMBED_URL );
     script.addEventListener('load', () => {
       // eslint-disable-next-line
       let embed = new window.Twitch.Embed(this.props.targetID, { ...this.props });
@@ -17,7 +14,6 @@ class Twitch extends React.Component {
   }
 
   render() {
-
     return (
         <div id={this.props.targetID}></div>
     )
@@ -27,6 +23,8 @@ class Twitch extends React.Component {
 Twitch.defaultProps = {
   targetID: 'twitch-embed',
   channel: 'zematoxic',
+  layout: 'video',
+  autoplay: false
 }
 
 export default Twitch

@@ -23,7 +23,7 @@ body {
 h1 {
   width: 100%;
   color: white;
-  font-weight: normal;
+  font-weight: bolder;
   text-decoration: none;
   font-style: normal;
 }
@@ -82,9 +82,19 @@ h1 {
   background: rgb(32, 34, 37);
 }
 
+.Info {
+  display: flex;
+}
 .Home {
   display: flex;
+  flex-flow: column;
   text-align: center;
+}
+
+.ICONS {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 15px;
 }
 
 .TwitchBox {
@@ -109,6 +119,17 @@ h1 {
   max-width: 50%;
   padding: 15px 15px;
   display: flex;
+}
+
+@media (max-width: 720px) {
+  .BotContainer{
+    max-width: 100%;
+    display: inline;
+  }
+  .ICONS {
+    display: flex;
+    padding: 15px 15px;
+  }
 }
 
 .Discord {
@@ -224,9 +245,22 @@ h1 {
   padding: 15px 15px;
 }
 
-@media (max-width: 720px) {
-  .BotContainer{
-    max-width: 100%;
-    display: inline;
-  }
+.BotHeader {
+  display: flex;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  text-decoration: none; 
+  border-radius: 15px;
+  box-shadow: 3px 3px 13px 3px rgba(0, 0, 0, 0.60);
+}
+
+.BotIcon{
+  border-radius: 50%;
+  border: black;
+}
+
+.Home>h1 {
+  font-size: 8vw;
 }

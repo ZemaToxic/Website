@@ -4,7 +4,7 @@ import Twitch from "./Twitch";
 class Home extends Component {
     render() {
         return (
-            <div className="Home">
+            <div className="Info">
                 <div className="InfoBox">
                     <h3>About me</h3>
                     <ul>
