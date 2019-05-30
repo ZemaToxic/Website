@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router'
 
@@ -56,24 +55,24 @@ class LoginPage extends React.Component {
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
         return (
-            <div className="col-md-6 col-md-offset-3">
-                <h2>Login</h2>
-                <form name="form" onSubmit={this.handleSubmit}>
-                    <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
+            <div className="Login">
+                <form name="LoginBox" onSubmit={this.handleSubmit}>
+                <h2>Developer portal Login</h2>
+                    <div className={'LoginFields' + (submitted && !username ? ' has-error' : '')}>
                         <label htmlFor="username">Username</label>
                         <input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} />
                         {submitted && !username &&
                             <div className="help-block">Username is required</div>
                         }
                     </div>
-                    <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
+                    <div className={'LoginFields' + (submitted && !password ? ' has-error' : '')}>
                         <label htmlFor="password">Password</label>
                         <input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
                         {submitted && !password &&
                             <div className="help-block">Password is required</div>
                         }
                     </div>
-                    <div className="form-group">
+                    <div className="LoginFields">
                         <button className="btn btn-primary">Login</button>
                         {loggingIn}
                     </div>

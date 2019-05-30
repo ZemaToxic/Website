@@ -26,6 +26,7 @@ h1 {
 
 .container {
   display: flex;
+  flex-flow: column;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-weight: normal;
@@ -34,15 +35,32 @@ h1 {
 }
 
 .sidebar {
-  height: 100vh;
   background: rgb(32, 34, 37);
 }
 
+.navbar {
+  display: flex;
+  background: rgb(32, 34, 37);
+}
+
+.navbar > .NavBarLink:last-child {
+  flex-grow: 2;
+  text-align: right;
+}
+
+.NavBarLink {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
 .SidebarLink {
+  margin: 15px;
   display: inline-block;
   color: white;
-  width: 4em;
-  padding: 5px 5px;
   text-align: center;
   text-decoration: none;
 }
@@ -62,6 +80,7 @@ h1 {
 
 .Home {
   display: flex;
+  text-align: center;
 }
 
 .TwitchBox {
@@ -143,12 +162,18 @@ h1 {
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
 }
 
-.LoginBox {
+.Login {
   display: flex;
   margin: 15px 15px;
+  padding: 15px 15px;  
+}
+
+.LoginBox {
+  padding: 0;
 }
 .LoginFields {
-  margin: 15px 15px;
+  padding: 0;
+  padding-top: 10px;
 }
 
 .btn {

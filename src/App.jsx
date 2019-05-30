@@ -10,54 +10,34 @@ import TwitchBots from "./pages/bots/TwitchBots";
 
 import { history } from "./_helpers";
 import { PrivateRoute } from "./_components/PrivateRoute";
-import { HomePage } from "./HomePage/HomePage";
-import { LoginPage } from "./LoginPage/LoginPage";
+import { HomePage } from "./HomePage";
+import { LoginPage } from "./LoginPage";
 
 class App extends Component {
   render() {
-    return (
-      <Router history={history}>
-        <div className="App">
-          <div className="container">
-            <div className="sidebar">
-              <ul>
-                <li>
-                  <Link to="/home" className="SidebarLink">
-                    <h2>Home</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/bots" className="SidebarLink">
-                    <h2>Bots</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/info" className="SidebarLink">
-                    <h2>Info</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/login" className="SidebarLink">
-                    <h2>Login</h2>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="content">
-              <div className="PageTop">
-                <h1>ZemaToxic Bots</h1>
-              </div>
-              <Route path="/home" exact component={Home} />
-              <Route exact path="/bots/" component={Bots} />
-              <Route path="/info/" component={Info} />
-              <Route path="/login/" component={LoginPage} />
-              <PrivateRoute exact path="/homePage" component={HomePage} />
-              <Route path="/bots/discordbots/" component={DiscordBots} />
-              <Route path="/bots/twitchbots/" component={TwitchBots} />
-            </div>
+  return (
+    <Router history={history}>
+      <div className="App">
+        <div className="container">
+          <div className="navbar">
+            <Link to="/" className="NavBarLink"> <h3>Home</h3> </Link>
+            <Link to="/info" className="NavBarLink"> <h3>About Me</h3> </Link>
+            <Link to="/bots" className="NavBarLink"> <h3>Bots</h3> </Link>
+            <Link to="/login" className="NavBarLink"> <h3>Login</h3> </Link>
+          </div>
+
+          <div className="content">
+            <Route path="/" exact component={Home} />
+            <Route path="/info/" component={Info} />
+            <Route exact path="/bots/" component={Bots} />
+            <Route path="/login/" component={LoginPage} />
+            <PrivateRoute exact path="/homePage" component={HomePage} />
+            <Route path="/bots/discordbots/" component={DiscordBots} />
+            <Route path="/bots/twitchbots/" component={TwitchBots} />
           </div>
         </div>
-      </Router>
+      </div>
+    </Router>
     );
   }
 }

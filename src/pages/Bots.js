@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Bots extends Component {
     render() {
