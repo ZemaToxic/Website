@@ -226,6 +226,7 @@ h1 {
 
 @media (max-width: 720px) {
   .BotContainer{
+    max-width: 100%;
     display: inline;
   }
 }
