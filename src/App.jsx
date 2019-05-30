@@ -35,6 +35,10 @@ class App extends Component {
             <Route path="/bots/discordbots/" component={DiscordBots} />
             <Route path="/bots/twitchbots/" component={TwitchBots} />
           </div>
+
+          <div className="footer">
+            <p>Made with React by ZemaToxic</p>
+          </div>
         </div>
       </div>
     </Router>

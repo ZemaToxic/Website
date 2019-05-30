@@ -264,3 +264,13 @@ h1 {
 .Home>h1 {
   font-size: 8vw;
 }
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding-right: 15px;
+  width: 100%;
+  text-align: right;
+  outline: 2px solid black;
+}
