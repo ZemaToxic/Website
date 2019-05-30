@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import Twitch from "./Twitch";
+//import Twitch from "./Twitch";
 
-class Home extends Component {
+class AboutMe extends Component {
     render() {
         return (
-            <div className="Info">
-                <div className="InfoBox">
+            <div className="About">
+                <h1>Coming soon.</h1>
+                {/* <div className="InfoBox">
                     <h3>About me</h3>
                     <ul>
                         <li>
@@ -21,10 +22,10 @@ class Home extends Component {
                 </div>
                 <div className="TwitchBox">
                     <Twitch />
-                </div>
+                </div> */}
             </div>
         );
     }
 }
 
-export default Home
+export default AboutMe

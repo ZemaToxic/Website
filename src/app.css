@@ -248,12 +248,19 @@ h1 {
 .BotHeader {
   display: flex;
   text-align: center;
-  padding: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: white;
-  text-align: center;
   text-decoration: none; 
   border-radius: 15px;
   box-shadow: 3px 3px 13px 3px rgba(0, 0, 0, 0.60);
+}
+.BotHeader>h1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .BotIcon{
@@ -265,6 +272,14 @@ h1 {
   font-size: 8vw;
 }
 
+.About>h1 {
+  font-size: 8vw;
+}
+
+.About {
+  padding: 20px;
+}
+
 .footer {
   position: fixed;
   right: 0;
@@ -273,4 +288,5 @@ h1 {
   width: 100%;
   text-align: right;
   outline: 2px solid black;
+  background: rgb(32, 34, 37);  
 }

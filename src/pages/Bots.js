@@ -13,7 +13,7 @@ class Bots extends Component {
                     </p>
                     <Link to="/bots/discordbots" className="BotHeader">
                         <img src="/ZemaBot.png" alt="ZemaBot" className="BotIcon" width="25%" height="25%"></img>
-                    <p>ZemaBot</p>
+                    <h1>ZemaBot</h1>
                     </Link>
                 </div>
                 <div className='Twitch'>
@@ -24,7 +24,7 @@ class Bots extends Component {
                     </p>
                     <Link to="/bots/twitchbots" className="BotHeader">
                         <img src="/ZemaBot.png" alt="ZemaBot" className="BotIcon" width="25%" height="25%"></img>
-                    <p>ZemaBot</p>
+                        <h1>ZemaBot</h1>
                     </Link>
                 </div>
 

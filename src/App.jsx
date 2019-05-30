@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Router, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Info from "./pages/Info";
+import AboutMe from "./pages/AboutMe";
 import Bots from "./pages/Bots";
 
 import DiscordBots from "./pages/bots/DiscordBots";
@@ -21,14 +21,14 @@ class App extends Component {
         <div className="container">
           <div className="navbar">
             <Link to="/" className="NavBarLink"> <h3>Home</h3> </Link>
-            <Link to="/info" className="NavBarLink"> <h3>About Me</h3> </Link>
+            <Link to="/about" className="NavBarLink"> <h3>About Me</h3> </Link>
             <Link to="/bots" className="NavBarLink"> <h3>Bots</h3> </Link>
             <Link to="/login" className="NavBarLink"> <h3>Login</h3> </Link>
           </div>
 
           <div className="content">
             <Route path="/" exact component={Home} />
-            <Route path="/info/" component={Info} />
+            <Route path="/about/" component={AboutMe} />
             <Route exact path="/bots/" component={Bots} />
             <Route path="/login/" component={LoginPage} />
             <PrivateRoute exact path="/homePage" component={HomePage} />
