@@ -106,13 +106,12 @@ h1 {
 }
 
 .BotContainer {
+  max-width: 50%;
   padding: 15px 15px;
   display: flex;
-
 }
 
 .Discord {
-  flex-basis: 100%;
   margin: 15px 15px;
   padding: 15px 15px;
   border-radius: 10px;
@@ -121,7 +120,6 @@ h1 {
 }
 
 .Twitch {
-  flex-basis: 100%;
   margin: 15px 15px;
   padding: 15px 15px;
   border-radius: 10px;
@@ -224,4 +222,10 @@ h1 {
 
 .loggedIn {
   padding: 15px 15px;
+}
+
+@media (max-width: 720px) {
+  .BotContainer{
+    display: inline;
+  }
 }
