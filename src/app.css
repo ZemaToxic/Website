@@ -272,6 +272,10 @@ h1 {
   font-size: 8vw;
 }
 
+.Home>p{
+  margin: 15px;
+}
+
 .About>h1 {
   font-size: 8vw;
 }
@@ -287,6 +291,10 @@ h1 {
   padding-right: 15px;
   width: 100%;
   text-align: right;
-  outline: 2px solid black;
   background: rgb(32, 34, 37);  
+}
+.footer>p {
+  font-size: small;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
 }
