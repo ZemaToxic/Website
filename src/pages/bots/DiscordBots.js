@@ -31,18 +31,21 @@ const INITIAL_STATE = {
           <h1>Discord Bot commands</h1>
           {
             isFetching ? (<p>Loading...</p>) : error ? (<p>ERROR: {error.message}</p>)
-                : Object.keys(data).map((key, i) => (
-                  <div className="Commands">
-                  {console.log(data)}
-                        <div className="CommandNameDiv">
-                            {data[0].commands[key].command}
-                        </div>
-                        <div className="CommandDescriptionDiv">
-                            {data[0].commands[key].description}
-                        </div>                 
-                    </div>
-                    
-                    ))
+                : Object.keys(data).map((bot, key) => (
+                  <div className="commands" key={key}>
+                    <h2>{`Commands for ${bot}`}</h2>
+                    {data[bot].map((command, key) => (
+                      <div className="Commands">
+                      <div className="CommandNameDiv" key={key}>
+                        {`${command.name}: ${command.description}`}
+                      </div>
+                      <div className="CommandDescriptionDiv" key={key}>
+                        {`${command.description}`}
+                      </div>
+                      </div>
+                    ))}
+                  </div>
+                ))
                 }
         </div>
       )

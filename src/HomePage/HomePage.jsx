@@ -60,7 +60,7 @@ class HomePage extends React.Component {
                     <button className="btn btn-primary"><Link to="/login">Logout</Link></button>   
                 </div>
                 <div className="bot-info-container">
-          {
+          { 
             isFetching
               ? (<p>Loading...</p>)
               : error
