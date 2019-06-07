@@ -37,7 +37,7 @@ const INITIAL_STATE = {
                     {data[bot].map((command, key) => (
                       <div className="Commands">
                       <div className="CommandNameDiv" key={key}>
-                        {`${command.name}: ${command.description}`}
+                        {`${command.name}`}
                       </div>
                       <div className="CommandDescriptionDiv" key={key}>
                         {`${command.description}`}
