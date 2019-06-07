@@ -10,12 +10,12 @@ const INITIAL_STATE = {
   }
   
 class HomePage extends React.Component {
+  state = { ...INITIAL_STATE }
     componentDidMount() {
       this.fetchData()
       this.props.dispatch(userActions.getAll());
     }
 
-state = { ...INITIAL_STATE }
     fetchData () {
       this.setState({ ...INITIAL_STATE, isFetching: true })
       if(!INITIAL_STATE.isFetching){
@@ -25,8 +25,14 @@ state = { ...INITIAL_STATE }
         .catch((error) => this.setState({ ...INITIAL_STATE, error }))
       }
     }
+    
     render() {
-        const { user, users, isFetching, data, error} = this.props;
+        const { user, users} = this.props;
+        const {
+          isFetching,
+          data,
+          error
+        } = this.state
         return (
             <div className="content">
                 <div className="loggedIn">

@@ -123,7 +123,6 @@ h1 {
 .CurrentWorkContainer {
   display: flex;
   padding: 15px 15px;
-  width: 100%;
 }
 
 @media (max-width: 720px) {
