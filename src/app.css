@@ -61,6 +61,12 @@ h1 {
   text-decoration: none;
 }
 
+.LoginCard {
+    position: fixed;
+    right: 15px;
+    cursor: pointer;
+}
+
 .SidebarLink {
   margin: 15px;
   display: inline-block;
@@ -182,9 +188,15 @@ h1 {
 }
 
 .Login {
-  display: flex;
+  display: block;
   margin: 15px 15px;
   padding: 15px 15px;
+  position: fixed;
+  top: 50px;
+  right: 0px;
+  background: rgb(32, 34, 37);
+  box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
+  z-index: 9;
 }
 
 .LoginBox {
@@ -192,6 +204,7 @@ h1 {
 }
 
 .LoginFields {
+  width: 90%;
   padding: 0;
   padding-top: 10px;
 }

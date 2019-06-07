@@ -12,6 +12,7 @@ import { history } from "./_helpers";
 import { PrivateRoute } from "./_components/PrivateRoute";
 import { HomePage } from "./HomePage";
 import { LoginPage } from "./LoginPage";
+import { DropDown } from "./pages/DropDown"
 
 class App extends Component {
   render() {
@@ -23,7 +24,9 @@ class App extends Component {
             <Link to="/" className="NavBarLink"> <h3>Home</h3> </Link>
             <Link to="/about" className="NavBarLink"> <h3>About Me</h3> </Link>
             <Link to="/bots" className="NavBarLink"> <h3>Bots</h3> </Link>
-            <Link to="/login" className="NavBarLink"> <h3>Login</h3> </Link>
+            <DropDown title="Login">
+                <LoginPage />
+            </DropDown>
           </div>
 
           <div className="content">
