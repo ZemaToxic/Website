@@ -16,7 +16,6 @@ const INITIAL_STATE = {
       if(!INITIAL_STATE.isFetching){
         fetch('https://api.zematoxic.com/bots/commands')
         .then((data) => data.json())
-        .then((data) => data[0])
         .then((data) => this.setState({ ...INITIAL_STATE, data }))
         .catch((error) => this.setState({ ...INITIAL_STATE, error }))
       }
@@ -33,14 +32,16 @@ const INITIAL_STATE = {
           {
             isFetching ? (<p>Loading...</p>) : error ? (<p>ERROR: {error.message}</p>)
                 : Object.keys(data).map((key, i) => (
-                    <div className="Commands">
+                  <div className="Commands">
+                  {console.log(data)}
                         <div className="CommandNameDiv">
-                            {data[key].command}
+                            {data[0].commands[key].command}
                         </div>
                         <div className="CommandDescriptionDiv">
-                            {data[key].description}
-                        </div>
+                            {data[0].commands[key].description}
+                        </div>                 
                     </div>
+                    
                     ))
                 }
         </div>
