@@ -24,7 +24,7 @@ class AboutMe extends Component {
                 <h1>Key Skills</h1>
                 <ul>
                     <li>
-                    - Leadership
+                    - Self Leadership
                     </li>
                     <li>
                     - Perserverance and Motivation
