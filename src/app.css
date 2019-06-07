@@ -128,7 +128,6 @@ h1 {
 @media (max-width: 720px) {
   .CurrentWorkContainer{
     display: block;
-    width: 100%;
   }
  .ICONS {
     display: flex;

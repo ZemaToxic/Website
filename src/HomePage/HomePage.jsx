@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import { authHeader } from '../_helpers/auth-header';
 import { userActions } from '../_actions/user.actions';
+
 const INITIAL_STATE = {
     isFetching: false,
     data: {},
@@ -20,8 +22,11 @@ class HomePage extends React.Component {
 
     fetchData () {
       this.setState({ ...INITIAL_STATE, isFetching: true })
+      const requestOptions = {
+        headers: authHeader()
+    };
       if(!INITIAL_STATE.isFetching){
-        fetch('https://api.zematoxic.com/bots/botinfo')
+        fetch('https://api.zematoxic.com/bots/botinfo', requestOptions)
         .then((data) => data.json())
         .then((data) => this.setState({ ...INITIAL_STATE, data }))
         .catch((error) => this.setState({ ...INITIAL_STATE, error }))
