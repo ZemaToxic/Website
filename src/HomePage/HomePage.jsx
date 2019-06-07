@@ -14,6 +14,8 @@ class HomePage extends React.Component {
     componentDidMount() {
       this.fetchData()
       this.props.dispatch(userActions.getAll());
+      console.log(this.state)
+      console.log(this.props)
     }
 
     fetchData () {
