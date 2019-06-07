@@ -129,7 +129,6 @@ h1 {
 @media (max-width: 720px) {
   .CurrentWorkContainer{
     display: block;
-    width: 100%;
   }
  .ICONS {
     display: flex;
@@ -332,4 +331,24 @@ h1 {
   font-size: small;
   margin-block-start: 5px;
   margin-block-end: 5px;
+}
+@keyframes fadeInImg{
+  from {
+    opacity: 0;
+  }
+ to {
+   opacity: 1;
+ }
+}
+
+.img-loading{
+  opacity: 0  
+}
+.img-loaded{
+  animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
+  position: relative;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-delay: 0.1s;
 }

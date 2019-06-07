@@ -13,8 +13,8 @@ class AboutMe extends Component {
                 <p>
                 I am ideally looking for a role in a Game development company so that I can use
                 my key skills I have honed at University in a proper Industry setting. In my free
-                time I have developed chat bots for both Discord and Twitch and am self-taught I
-                have recently branched out into the React framework and have made and hosted
+                time I have developed chat bots for both Discord and Twitch and am self-taught. I
+                have recently branched out into the React framework and have made and hosted own
                 my website.
                 </p>
                 <p>
