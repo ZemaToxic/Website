@@ -3,13 +3,34 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { userActions } from '../_actions/user.actions';
-
+const INITIAL_STATE = {
+    isFetching: false,
+    data: {},
+    error: null
+  }
+  
 class HomePage extends React.Component {
     componentDidMount() {
-        this.props.dispatch(userActions.getAll());
+      this.fetchData()
+      this.props.dispatch(userActions.getAll());
     }
 
+state = { ...INITIAL_STATE }
+    fetchData () {
+      this.setState({ ...INITIAL_STATE, isFetching: true })
+      if(!INITIAL_STATE.isFetching){
+        fetch('https://api.zematoxic.com/bots/botinfo')
+        .then((data) => data.json())
+        .then((data) => this.setState({ ...INITIAL_STATE, data }))
+        .catch((error) => this.setState({ ...INITIAL_STATE, error }))
+      }
+    }
     render() {
+        const {
+            isFetching,
+            data,
+            error
+          } = this.state
         const { user, users } = this.props;
         return (
             <div className="content">
@@ -30,6 +51,19 @@ class HomePage extends React.Component {
                     }
                     <button className="btn btn-primary"><Link to="/login">Logout</Link></button>   
                 </div>
+                <div className="bot-info-container">
+          {
+            isFetching
+              ? (<p>Loading...</p>)
+              : error
+                ? (<p>ERROR: {error.message}</p>)
+                : Object.keys(data).map((key, i) => (
+                  <div className="info-key" key={i}>
+                    {`${key} - ${data[key]}`}
+                  </div>
+                ))
+              }
+        </div>
             </div>
         );
     }
