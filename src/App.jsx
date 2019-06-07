@@ -3,7 +3,7 @@ import { Router, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
-import Bots from "./pages/Bots";
+import CurrentWork from "./pages/CurrentWork";
 
 import DiscordBots from "./pages/bots/DiscordBots";
 import TwitchBots from "./pages/bots/TwitchBots";
@@ -23,7 +23,7 @@ class App extends Component {
           <div className="navbar">
             <Link to="/" className="NavBarLink"> <h3>Home</h3> </Link>
             <Link to="/about" className="NavBarLink"> <h3>About Me</h3> </Link>
-            <Link to="/bots" className="NavBarLink"> <h3>Bots</h3> </Link>
+            <Link to="/currentwork" className="NavBarLink"> <h3>Current Work</h3> </Link>
             <DropDown title="Login">
                 <LoginPage />
             </DropDown>
@@ -32,11 +32,11 @@ class App extends Component {
           <div className="content">
             <Route path="/" exact component={Home} />
             <Route path="/about/" component={AboutMe} />
-            <Route exact path="/bots/" component={Bots} />
+            <Route exact path="/currentwork/" component={CurrentWork} />
             <Route path="/login/" component={LoginPage} />
             <PrivateRoute exact path="/homePage" component={HomePage} />
-            <Route path="/bots/discordbots/" component={DiscordBots} />
-            <Route path="/bots/twitchbots/" component={TwitchBots} />
+            <Route path="/currentwork/bots/discordbots/" component={DiscordBots} />
+            <Route path="/currentwork/bots/twitchbots/" component={TwitchBots} />
           </div>
 
           <div className="footer">

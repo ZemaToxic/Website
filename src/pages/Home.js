@@ -7,10 +7,24 @@ class Home extends Component {
             <div className="Home">
                 <h1>Crystal Belladonna</h1>
                 <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    I am a 24 year old Junior Game developer, I am comfortable with the following Coding languages 
+                </p>
+                <ul>
+                    <li>
+                        - C++
+                    </li>
+                    <li>
+                        - C#
+                    </li>
+                    <li>
+                        - Javascript / JS 
+                    </li>
+                </ul>
+                <p>
+                    I have recently branched out into using the React Framework to make websites and have Developed and hosted this site.
                 </p>
                 <div className="Social">
-                    <h1>I can be found on Social Media at the following places</h1>
+                    <h1>You can find me on Social Media at the following places</h1>
                     <div className="ICONS">
                         <div className='Twitter'>
                             <h3>Twitter</h3> <SocialIcon url="http://twitter.com/zematoxic" />

@@ -94,7 +94,6 @@ h1 {
 .Home {
   display: flex;
   flex-flow: column;
-  text-align: center;
 }
 
 .ICONS {
@@ -121,18 +120,18 @@ h1 {
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
 }
 
-.BotContainer {
-  max-width: 50%;
-  padding: 15px 15px;
+.CurrentWorkContainer {
   display: flex;
+  padding: 15px 15px;
+  width: 100%;
 }
 
 @media (max-width: 720px) {
-  .BotContainer{
-    max-width: 100%;
-    display: inline;
+  .CurrentWorkContainer{
+    display: block;
+    width: 100%;
   }
-  .ICONS {
+ .ICONS {
     display: flex;
     padding: 15px 15px;
   }
@@ -141,14 +140,31 @@ h1 {
 .Discord {
   margin: 15px 15px;
   padding: 15px 15px;
+  width: 350px;
   border-radius: 10px;
   background: #7289DA;
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
+}
+.GameDev {
+  margin: 15px 15px;
+  padding: 15px 15px;
+  width: 350px;
+  border-radius: 10px;
+  background: #076975;
+  box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
+}
+
+.GameDev>h1{
+  background: linear-gradient(180deg, rgba(255,195,84,1) 0%, rgba(255,160,52,1) 100%);
+  color:transparent;
+  background-clip: text;
+  text-align: center;
 }
 
 .Twitch {
   margin: 15px 15px;
   padding: 15px 15px;
+  width: 350px;
   border-radius: 10px;
   background: #6441A4;
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
@@ -235,7 +251,7 @@ h1 {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
-  
+
 }
 
 .form-control {
@@ -260,12 +276,13 @@ h1 {
 
 .BotHeader {
   display: flex;
+  margin-top: 10px;
   text-align: center;
   padding-left: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  text-decoration: none; 
+  text-decoration: none;
   border-radius: 15px;
   box-shadow: 3px 3px 13px 3px rgba(0, 0, 0, 0.60);
 }
@@ -283,16 +300,21 @@ h1 {
 
 .Home>h1 {
   font-size: 8vw;
+  text-align: center;
+
 }
 
 .Home>p{
-  margin: 15px;
+  margin: 15px 15px;
 }
 
-.About>h1 {
-  font-size: 8vw;
+.Home>ul{
+  margin-left: 15px;
 }
 
+.Social {
+  text-align: center;
+}
 .About {
   padding: 20px;
 }
@@ -304,7 +326,7 @@ h1 {
   padding-right: 15px;
   width: 100%;
   text-align: right;
-  background: rgb(32, 34, 37);  
+  background: rgb(32, 34, 37);
 }
 .footer>p {
   font-size: small;

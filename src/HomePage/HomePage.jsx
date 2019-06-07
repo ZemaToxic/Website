@@ -26,12 +26,7 @@ state = { ...INITIAL_STATE }
       }
     }
     render() {
-        const {
-            isFetching,
-            data,
-            error
-          } = this.state
-        const { user, users } = this.props;
+        const { user, users, isFetching, data, error} = this.props;
         return (
             <div className="content">
                 <div className="loggedIn">
@@ -70,11 +65,14 @@ state = { ...INITIAL_STATE }
 }
 
 function mapStateToProps(state) {
-    const { users, authentication } = state;
+    const { users, authentication, isFetching, data, error } = state;
     const { user } = authentication;
     return {
         user,
-        users
+        users,
+        isFetching,
+        data,
+        error
     };
 }
 
