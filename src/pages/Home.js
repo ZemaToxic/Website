@@ -5,7 +5,7 @@ class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <h1>Crystal Belladonna</h1>
+                <h1>ZemaToxic</h1>
                 <p>
                     I am a 24 year old Junior Game developer, I am comfortable with the following Coding languages 
                 </p>

@@ -54,7 +54,7 @@ class CurrentWork extends Component {
                     <hr size="3" color="#000000" width="100%"></hr>
                     <p>
                         I have also made a few Twitch chat bots, these are used to help Streamers and their
-                         moderation teams these have features such as but not limited to:
+                         moderation teams. These also have features such as but not limited to:
                     </p>
                     <ul>
                         <li>
