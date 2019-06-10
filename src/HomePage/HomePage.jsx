@@ -59,15 +59,16 @@ class HomePage extends React.Component {
                     }
                     <button className="btn btn-primary"><Link to="/login">Logout</Link></button>   
                 </div>
-                <div className="bot-info-container">
+                <div className="info-container">
                   { isFetching ? (<p>Loading...</p>) : error ? (<p>ERROR: {error.message}</p>)
                   : Object.keys(data).map((keys, i) => (
                   <div>
                     <h2>{`${keys}`}</h2>
-                    {data[keys].map((command, key) => (
-                    <div>
-                      {`${command}`}
-                    </div>
+                    {Object.keys(data[keys]).map((name, i) => (
+                    <div className="InfoContainer">
+                        <div className="DataInfo"> {name}:</div>
+                        <div className="DataValue">  { data[keys][name] } </div>
+                      </div>
                     ))}
                   </div>
                   ))}

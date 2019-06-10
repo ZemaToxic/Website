@@ -193,6 +193,28 @@ h1 {
   outline: 1px dashed black;
 }
 
+.info-container {
+  margin: 15px 15px;
+  padding: 15px 15px;
+  border-radius: 10px;
+  background: #646464;
+  box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
+  width: 300px;
+  
+}
+
+.InfoContainer {
+  display: flex;
+}
+
+.DataInfo {
+  padding: 5px 5px;
+}
+
+.DataValue {
+  padding: 5px 5px;
+}
+
 .bot-info-container {
   padding: 15px 15px;
   margin: 15px 15px;
