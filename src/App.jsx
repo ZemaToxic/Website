@@ -35,8 +35,8 @@ class App extends Component {
             <Route exact path="/currentwork/" component={CurrentWork} />
             <Route path="/login/" component={LoginPage} />
             <PrivateRoute exact path="/homePage" component={HomePage} />
-            <Route path="/currentwork/bots/discordbots/" component={DiscordBots} />
-            <Route path="/currentwork/bots/twitchbots/" component={TwitchBots} />
+            <Route path="/currentwork/discordbots/" component={DiscordBots} />
+            <Route path="/currentwork/twitchbots/" component={TwitchBots} />
           </div>
 
           <div className="footer">

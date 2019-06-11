@@ -57,7 +57,7 @@ class HomePage extends React.Component {
                             )}
                         </ul>
                     }
-                    <button className="btn btn-primary"><Link to="/login">Logout</Link></button>   
+                    <button className="btn btn-primary"><Link to="/">Logout</Link></button>   
                 </div>
                 <div className="info-container">
                   { isFetching ? (<p>Loading...</p>) : error ? (<p>ERROR: {error.message}</p>)
