@@ -133,12 +133,21 @@ h1 {
     display: flex;
     padding: 15px 15px;
   }
+  .GameDev {
+    width: 100%;
+  }
+  .Discord {
+    width: 100%;
+  }
+  .Twitch {
+    width: 100%;
+  }
 }
 
 .GameDev {
   margin: 15px 15px;
   padding: 15px 15px;
-  width: 300px;
+  width: 350px;
   border-radius: 10px;
   background: #076975;
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
@@ -154,7 +163,7 @@ h1 {
 .Discord {
   margin: 15px 15px;
   padding: 15px 15px;
-  width: 300px;
+  width: 350px;
   border-radius: 10px;
   background: #7289DA;
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
@@ -163,7 +172,7 @@ h1 {
 .Twitch {
   margin: 15px 15px;
   padding: 15px 15px;
-  width: 300px;
+  width: 350px;
   border-radius: 10px;
   background: #6441A4;
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
