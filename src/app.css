@@ -134,13 +134,16 @@ h1 {
     padding: 15px 15px;
   }
   .GameDev {
-    width: 325px;
+    box-sizing: border-box;
+    width: 100%;
   }
   .Discord {
-    width: 325px;
+    box-sizing: border-box;
+    width: 100%;
   }
   .Twitch {
-    width: 325px;
+    box-sizing: border-box;
+    width: 100%;
   }
 }
 
