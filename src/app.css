@@ -62,7 +62,7 @@ h1 {
 }
 
 .LoginCard {
-    position: fixed;
+    position: absolute;
     right: 15px;
     cursor: pointer;
 }
@@ -227,7 +227,7 @@ h1 {
   display: block;
   margin: 15px 15px;
   padding: 15px 15px;
-  position: fixed;
+  position: absolute;
   top: 50px;
   right: 0px;
   background: rgb(32, 34, 37);

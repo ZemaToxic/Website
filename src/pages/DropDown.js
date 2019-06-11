@@ -41,18 +41,12 @@ export class DropDown extends Component {
         {
           this.state.showMenu
             ? (
-              <div
-                className="menu"
-                ref={(element) => {
+              <div className="menu" ref={(element) => {
                   this.dropdownMenu = element;
-                }}
-              >
+                }}>
                     {this.props.children}
               </div>
-            )
-            : (
-              null
-            )
+            ) : ( null )
         }
       </div>
     );
