@@ -41,6 +41,9 @@ class Home extends Component {
                         <div className='Instagram'>
                             <h3>Instagram</h3> <SocialIcon url="https://www.instagram.com/zematoxic/" />
                         </div>
+                        <div className='LinkedIn'>
+                            <h3>LinkedIn</h3> <SocialIcon url="https://www.linkedin.com/in/zematoxic" />
+                        </div>
                     </div>
                 </div>
             </div>
