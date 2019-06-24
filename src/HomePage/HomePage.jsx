@@ -26,7 +26,7 @@ class HomePage extends React.Component {
         headers: authHeader()
     };
       if(!INITIAL_STATE.isFetching){
-        fetch('https://api.zematoxic.com/bots/botinfo', requestOptions)
+        fetch('https://api.zematoxic.com/botinfo', requestOptions)
         .then((data) => data.json())
         .then((data) => this.setState({ ...INITIAL_STATE, data }))
         .catch((error) => this.setState({ ...INITIAL_STATE, error }))

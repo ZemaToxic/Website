@@ -13,7 +13,7 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`https://api.zematoxic.com/bots/users/authenticate`, requestOptions)
+    return fetch(`https://api.zematoxic.com/users/authenticate`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -34,7 +34,7 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch(`https://api.zematoxic.com/bots/users`, requestOptions).then(handleResponse);
+    return fetch(`https://api.zematoxic.com/users`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {
