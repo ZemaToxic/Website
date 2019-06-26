@@ -32,9 +32,6 @@ class Home extends Component {
                         <div className='GitHub'>
                             <h3>GitHub</h3> <SocialIcon url="http://github.com/ZemaToxic" />
                         </div>
-                        <div className='TwitchIcon'>
-                            <h3>Twitch</h3> <SocialIcon url="http://twitch.tv/zematoxic" />
-                        </div>
                         <div className='Reddit'>
                             <h3>Reddit</h3> <SocialIcon url="https://www.reddit.com/user/ZemaToxic" />
                         </div>
