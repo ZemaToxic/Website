@@ -1,0 +1,36 @@
+.Main{
+    display: flex;
+    flex-grow: 1;
+}
+
+.SideBar {
+    padding: 5px;
+    background: rgb(32, 34, 37);
+}
+
+.SideBar>h3{
+    width: 100px;
+    text-align: center;
+}
+
+.SideBarLink{
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.DashContent{
+    margin: 15px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.DashTile{
+    background-color: #444;
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 150%;
+}

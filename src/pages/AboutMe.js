@@ -33,7 +33,7 @@ class AboutMe extends Component {
                     - Organisation
                     </li>
                     <li>
-                    - Good Communicatior
+                    - Good Communicator
                     </li>
                     <li>
                     - Problem Solver

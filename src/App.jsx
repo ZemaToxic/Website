@@ -14,6 +14,8 @@ import { HomePage } from "./HomePage";
 import { LoginPage } from "./LoginPage";
 import { DropDown } from "./pages/DropDown"
 
+import Dashboard from "./pages/DashBoard/Dashboard"
+
 class App extends Component {
   render() {
   return (
@@ -32,6 +34,7 @@ class App extends Component {
           <div className="content">
             <Route path="/" exact component={Home} />
             <Route path="/about/" component={AboutMe} />
+            <Route exact path="/dashboard/" component={Dashboard} />
             <Route exact path="/currentwork/" component={CurrentWork} />
             <Route path="/login/" component={LoginPage} />
             <PrivateRoute exact path="/homePage" component={HomePage} />

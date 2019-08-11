@@ -67,14 +67,6 @@ h1 {
     cursor: pointer;
 }
 
-.SidebarLink {
-  margin: 15px;
-  display: inline-block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-
 .content {
   height: 100%;
   width: 100%;
