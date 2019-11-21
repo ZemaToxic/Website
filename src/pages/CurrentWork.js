@@ -10,6 +10,8 @@ import twitchImage from "./Images/Twitch-Logo-Full.png"
 import zemabotImage from "./Images/ZemaBot.png"
 import cynetImage from "./Images/Cy_Net.png"
 
+import totemImage from "./Images/Totem.png"
+
 class CurrentWork extends Component {
     render() {
         return (
@@ -86,6 +88,12 @@ class CurrentWork extends Component {
                             <ImageLoader src={cynetImage} alt="Cy_Net" className="BotIcon" width="25%" height="25%"/>
                             <h1>Cy_Net</h1>
                         </div>
+                </div>
+                <div className='Totem'>
+                    <a href="https://doctorplague.itch.io/totem">
+                        <ImageLoader src={ totemImage } alt="Logo" width="100%" height="100%"/>
+
+                    </a>
                 </div>
             </div>
         );

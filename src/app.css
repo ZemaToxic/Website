@@ -151,6 +151,14 @@ h1 {
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
 }
 
+.Totem {
+  margin: 15px 15px;
+  padding: 15px 15px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
+}
+
 .GameDev>h1{
   background: linear-gradient(180deg, rgba(255,195,84,1) 0%, rgba(255,160,52,1) 100%);
   color:transparent;
